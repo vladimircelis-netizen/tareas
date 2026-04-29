@@ -1,0 +1,21 @@
+const tareas=[
+    {titulo:"pintar", descripcion:"pintar cuadro", estado: "true"},
+    {titulo:"cantar", descripcion:"cantar en coro", estado: "false"},
+    {titulo:"bailar", descripcion:"bailar merengue", estado: "true"}
+]
+
+let titulo = prompt("Ingrese el nombre de la tarea: ").toLowerCase();
+let descripcion = prompt("Ingrese descripcion de la tarea: ").toLowerCase();
+let estado = prompt("Ingrese el estado de la tarea (true / false):").toLowerCase();
+tareas.push({titulo: titulo, descripcion: descripcion, estado: estado});
+
+tareas.forEach(t => {
+    console.log(`${t.titulo} - ${t.descripcion} - ${t.estado}`);});
+
+  let filtrar = prompt("ingrese el estado a filtrar (true / false): ").toLowerCase();
+
+let resultado = tareas.filter(t => t.estado === filtrar);
+
+resultado.forEach(t => {
+    console.log(`${t.titulo} - ${t.descripcion} - ${t.estado}`);
+});
