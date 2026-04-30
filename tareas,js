@@ -18,4 +18,4 @@ let resultado = tareas.filter(t => t.estado === filtrar);
 
 resultado.forEach(t => {
     console.log(`${t.titulo} - ${t.descripcion} - ${t.estado}`);
-});
+}); //Hola
